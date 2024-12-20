@@ -1,0 +1,23 @@
+mport numpy as np
+import cv2 as cv
+
+imgKAI = cv.imread('Argo_Anggrek.jpg')
+imgKAILOGO = cv.imread('Logo_KAI.svg')
+
+rows,cols,channels = imgKAILOGO.shape
+roi = imgKAI[0:rows,0:cols]
+
+img2gray = cv.cvtColor(imgKAILOGO, cv.COLOR_BGR2GRAY)
+ret, mask = cv.threshold(img2gray,10, 255,cv.THRESH_BINARY)
+mask_inv = cv.bitwise_not (mask)
+
+img1_bg = cv.bitwise_and(roi,roi,mask = mask_inv)
+
+img2_fg = cv.bitwise_and(imgKAILOGO,imgKAILOGO,mask= mask)
+
+dst=cv.add(img1_bg,img2_fg)
+imgKAI[0:rows, 0:cols] = dst
+
+cv.imshow('GAMBAR KERETA', imgKAI)
+cv.waitKey(0)
+cv.destroyAllWindows

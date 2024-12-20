@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Penjualan</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Menyertakan pustaka Chart.js untuk grafik -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Selamat datang  panji restu fadilah</h1>
+            <p>Administrator</p>
+            <nav>
+                <ul>
+                    <li><a href="#">Overview</a></li>
+                    <li><a href="#">Sales Chart</a></li>
+                    <li><a href="#">Product Performance</a></li>
+                    <li><a href="#">Revenue Breakdown</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="sales-overview">
+                <h2>Sales Overview</h2>
+                <div class="metrics">
+                    <div class="metric">
+                        <h3>Total Revenue</h3>
+                        <p>$125,450</p>
+                    </div>
+                    <div class="metric">
+                        <h3>Total Sales</h3>
+                        <p>1,245</p>
+                    </div>
+                    <div class="metric">
+                        <h3>Average Order Value</h3>
+                        <p>$100.70</p>
+                    </div>
+                    <div class="metric">
+                        <h3>Conversion Rate</h3>
+                        <p>3.5%</p>
+                    </div>
+                </div>
+            </section>
+            <section class="sales-chart">
+                <h2>Sales Chart</h2>
+                <canvas id="salesChart"></canvas>
+            </section>
+        </main>
+    </div>
+    <script>
+        // Data untuk grafik penjualan bulanan
+        const salesData = {
+            labels: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'],
+            datasets: [{
+                label: 'Penjualan (Rp)',
+                data: [10000, 12000, 8000, 15000, 20000, 18000, 22000, 24000, 21000, 23000, 25000, 27000],
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1
+            }]
+        };
+
+        // Konfigurasi untuk grafik
+        const config = {
+            type: 'bar',
+            data: salesData,
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        };
+
+        // Inisialisasi dan render grafik
+        const salesChart = new Chart(
+            document.getElementById('salesChart'),
+            config
+        );
+    </script>
+</body>
+</html>
