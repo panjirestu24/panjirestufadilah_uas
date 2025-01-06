@@ -4,53 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio</title>
-    <link rel="stylesheet" href="portofolio\sytle.css">
+    <link rel="stylesheet" href="portofolio/style.css">
 </head>
 <body>
     <header>
-        <h1> Panji Restu Fadilah</h1>
+        <h1>Panji Restu Fadilah</h1>
         <img src="WhatsApp Image 2024-10-19 at 18.57.56.jpg" alt="Foto Anda" class="profile-photo">
-        <p>Selamat datang di portofolio saya Saya seorang mahasiswa unpam  yang berfokus pada SEMESTER 5.</p>
+        <p>Selamat datang di portofolio saya. Saya seorang mahasiswa Unpam yang berfokus pada SEMESTER 5.</p>
     </header>
 
     <main>
-        <div class="portfolio-box">
-            <h2>Form Login</h2>
-            <img src="Screenshot (102).png" alt="Form Login">
-            <button>
-                <a href ="portofolio\formlogin\login-index.html">Lihat Proyek</a>
-            </button>
-        </div>
-        <div class="portfolio-box">
-            <h2>Kalkulator</h2>
-            <img src="Screenshot (103).png" alt="Kalkulator">
-            <button>
-                <a href ="portofolio\kalkulator\calc-index.html">Lihat Proyek</a>
-            </button>
-        </div>
-        <div class="portfolio-box">
-            <h2>Dashboard Karyawan</h2>
-            <img src="Screenshot (104).png" alt="Proyek 3">
-            <button>
-                <a href ="https://panjirestu24.github.io/panji_restu_fadilah-_uts/">Lihat Proyek</a>
-            </button>
-        </div>
-        <div class="portfolio-box">
-            <h2>Game Tetris</h2>
-            <img src="Screenshot (104).png" alt="Proyek 4">
-            <button>
-                <a href ="panji restu fadilah game tetris\INDEX.html">Lihat Proyek</a>
-            </button>
-        </div>
-        <div class="portfolio-box">
-            <h2>Dashboard Penjualan</h2>
-            <img src="Screenshot (104).png" alt="Proyek 4">
-            <button>
-                <a href ="chart\chartxx1.html">Lihat Proyek</a>
-            </button>
-        </div>
+        <!-- Filter Galeri -->
+        <section class="gallery-section">
+            <h2>Portofolio</h2>
+            <div class="filter-controls">
+                <button class="filter-btn" data-category="all">Semua</button>
+                <button class="filter-btn" data-category="web">Proyek Web</button>
+                <button class="filter-btn" data-category="game">Game</button>
+                <button class="filter-btn" data-category="dashboard">Dashboard</button>
+            </div>
+
+            <div class="gallery">
+                <div class="portfolio-box" data-category="web">
+                    <h2>Form Login</h2>
+                    <img src="Screenshot (102).png" alt="Form Login">
+                    <button>
+                        <a href="portofolio/formlogin/login-index.html">Lihat Proyek</a>
+                    </button>
+                </div>
+                <div class="portfolio-box" data-category="web">
+                    <h2>Kalkulator</h2>
+                    <img src="Screenshot (103).png" alt="Kalkulator">
+                    <button>
+                        <a href="portofolio/kalkulator/calc-index.html">Lihat Proyek</a>
+                    </button>
+                </div>
+                <div class="portfolio-box" data-category="dashboard">
+                    <h2>Dashboard Karyawan</h2>
+                    <img src="Screenshot (104).png" alt="Dashboard Karyawan">
+                    <button>
+                        <a href="https://panjirestu24.github.io/panji_restu_fadilah-_uts/">Lihat Proyek</a>
+                    </button>
+                </div>
+                <div class="portfolio-box" data-category="game">
+                    <h2>Game Tetris</h2>
+                    <img src="Screenshot (104).png" alt="Game Tetris">
+                    <button>
+                        <a href="panji restu fadilah game tetris/INDEX.html">Lihat Proyek</a>
+                    </button>
+                </div>
+                <div class="portfolio-box" data-category="dashboard">
+                    <h2>Dashboard Penjualan</h2>
+                    <img src="Screenshot (104).png" alt="Dashboard Penjualan">
+                    <button>
+                        <a href="chart/chartxx1.html">Lihat Proyek</a>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Google Maps -->
+        <section class="map-section">
+            <h2>Lokasi Saya</h2>
+            <div id="map" style="width: 100%; height: 400px;">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m32!1m12!1m3!1d63448.05709361441!2d106.65694389058685!3d-6.32873331658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m17!3e9!4m3!3m2!1d-6.3104569999999995!2d106.6590872!4m5!1s0x2e69e5a6e26dc3cd%3A0xccd6344b8021119d!2sUniversitas%20Pamulang%20Kampus%202%20(UNPAM%20Viktor)%2C%20Jl.%20Raya%20Puspitek%2C%20Buaran%2C%20Kec.%20Pamulang%2C%20Kota%20Tangerang%20Selatan%2C%20Banten%2015310!3m2!1d-6.3462879!2d106.6915326!4m5!1s0x2e69ef77956ae9a9%3A0x68c63c11c8d2c0e9!2sPamulang%20University%2C%20Jalan%20Suryakencana%2C%20West%20Pamulang%2C%20South%20Tangerang%20City%2C%20Banten!3m2!1d-6.3441676!2d106.73715539999999!5e0!3m2!1sid!2sid!4v1736132935930!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
     </main>
 
-    <script src="portofolio\script.js"></script>
+    
+    <script>
+        // Google Maps Initialization
+        function initMap() {
+            const location = { lat: -6.20000, lng: 106.816666 }; // Sesuaikan koordinat lokasi
+            const map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 10,
+                center: location,
+            });
+            new google.maps.Marker({
+                position: location,
+                map: map,
+            });
+        }
+        window.onload = initMap;
+
+        // Filter Gallery
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.portfolio-box');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const category = button.getAttribute('data-category');
+                galleryItems.forEach(item => {
+                    if (category === 'all' || item.getAttribute('data-category') === category) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
